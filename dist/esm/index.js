@@ -11,7 +11,7 @@ import crypto from 'crypto';
 import secp256k1 from 'secp256k1';
 import queryString from 'query-string';
 import 'isomorphic-ws';
-import wrtc from 'wrtc';
+import getBrowserRTC from 'get-browser-rtc';
 import io from 'socket.io-client';
 import QrCode from 'qrcode';
 import web3 from 'web3';
@@ -1519,7 +1519,7 @@ var MewConnectInitiatorV2 = /*#__PURE__*/function (_MewConnectCommon) {
             config: {
               iceServers: this.stunServers
             },
-            wrtc: wrtc
+            wrtc: getBrowserRTC(),
           }
         };
         this.initiatorStartRTC(options);
@@ -1677,7 +1677,7 @@ var MewConnectInitiatorV2 = /*#__PURE__*/function (_MewConnectCommon) {
           config: {
             iceServers: webRtcServers
           },
-          wrtc: wrtc
+          wrtc: getBrowserRTC(),
         };
 
         var simpleOptions = _objectSpread2(_objectSpread2({}, defaultOptions), webRtcConfig);
@@ -1916,7 +1916,7 @@ var MewConnectInitiatorV2 = /*#__PURE__*/function (_MewConnectCommon) {
                 return newObject;
               })
             },
-            wrtc: wrtc
+            wrtc: getBrowserRTC(),
           }
         };
         debug$c('turn info arrived and begin turn'); // todo remove dev item
@@ -2208,7 +2208,7 @@ var MewConnectInitiatorV1 = /*#__PURE__*/function (_MewConnectCommon) {
         config: {
           iceServers: webRtcServers
         },
-        wrtc: wrtc
+        wrtc: getBrowserRTC(),
       };
 
       var simpleOptions = _objectSpread2(_objectSpread2({}, defaultOptions), {}, {
