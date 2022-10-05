@@ -1,7 +1,7 @@
 import debugLogger from 'debug';
 import uuid from 'uuid/v4';
 import WebSocket from '../websocketWrapper';
-import wrtc from 'wrtc';
+import wrtc from '@koush/wrtc';
 import MewConnectCommon from '../MewConnectCommon';
 import { stunServers } from '../config';
 

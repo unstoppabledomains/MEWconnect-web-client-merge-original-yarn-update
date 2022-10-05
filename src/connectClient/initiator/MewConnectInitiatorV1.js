@@ -1,7 +1,7 @@
 import debugLogger from 'debug';
 import { V1endpoint, V2endpoint } from '../config';
 
-import wrtc from 'wrtc';
+import wrtc from '@koush/wrtc';
 import io from 'socket.io-client';
 import MewConnectCommon from '../MewConnectCommon';
 
